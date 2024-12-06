@@ -1,0 +1,204 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0077b6;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #0077b6;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #023e8a;
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    background: url('your-image-path.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .countdown {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Section Styles */
+  section {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #023e8a;
+  }
+  
+  section p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #f1f1f1;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  footer ul {
+    list-style: none;
+  }
+  
+  footer ul li {
+    display: inline;
+    margin: 0 1rem;
+  }
+  
+  footer ul a {
+    text-decoration: none;
+    color: #0077b6;
+  }
+  
+  footer ul a:hover {
+    text-decoration: underline;
+  }
+
+/* Carousel Container */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  /* Carousel Images */
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel img {
+    min-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Ensure images cover the container without stretching */
+  }
+  
+  /* Navigation Buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  color: rgb(25, 0, 255);
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev::before, .next::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid black;
+  border-right: 3px solid black;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.prev::before {
+  transform: translate(-50%, -50%) rotate(-135deg);  /* Left arrow */
+}
+
+.next::before {
+  transform: translate(-50%, -50%) rotate(45deg);  /* Right arrow */
+}
+
+.prev:hover, .next:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 6px 15px rgb(47, 0, 255);
+}
+
+  /* Static Text Overlay */
+.static-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text */
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0); /* Text shadow for better readability */
+    background-color: rgba(255, 255, 255, 0); /* Semi-transparent background */
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+
