@@ -186,19 +186,23 @@
   box-shadow: 0 6px 15px rgb(47, 0, 255);
 }
 
-  /* Static Text Overlay */
+/* Static Text Overlay */
 .static-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the text */
-    color: white;
-    font-size: 3rem;
-    font-weight: bold;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0); /* Text shadow for better readability, nul */
-    background-color: rgba(255, 255, 255, 0); /* Semi-transparent background */
-    padding: 15px;
-    border-radius: 10px;
-  }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the text */
+  color: white;
+  font-size: 3.5rem; /* Slightly larger font size */
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0); /* Subtle shadow for readability */
+  background-color: rgba(0, 0, 0, 0); /* Semi-transparent dark background */
+  padding: 25px; /* More padding for a spacious feel */
+  border-radius: 15px;
+  max-width: 80%; /* Restrict text width to prevent overflow */
+  text-align: center; /* Center-align text */
+  word-wrap: break-word; /* Allow text to break into multiple lines */
+  box-sizing: border-box; /* Include padding in width calculations */
+}
 
 
