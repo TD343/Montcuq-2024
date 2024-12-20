@@ -181,6 +181,7 @@ color: #023e8a;
 }
 
 
+
   /* Modifier la taille du texte sur mobile */
 @media (max-width: 768px) {
   body, h1, h2, h3, h4, h5, h6, p, a {
