@@ -137,3 +137,45 @@
     margin-top: 10px;
   }
   
+  /* Mobile Dropdown Menu (Hidden by default) */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none; /* Hide the nav-links by default */
+      flex-direction: column;
+      background-color: #fff;
+      position: absolute;
+      top: 100%;
+      right: 0;  /* Align the dropdown to the right */
+      width: 100%;
+      padding: 1rem 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+      display: flex; /* Display the nav-links when active */
+  }
+
+  .menu-toggle {
+    display: flex; /* Utilise Flexbox pour centrer l'icône */
+    justify-content: center; /* Centre l'icône horizontalement */
+    align-items: center; /* Centre l'icône verticalement */
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem; /* Taille de l'icône */
+    width: 40px; /* Fixer la largeur */
+    height: 40px; /* Fixer la hauteur */
+    color: #0077b6;
+    cursor: pointer;
+    border-radius: 5px; /* Ajoute des bords arrondis, optionnel pour un effet visuel */
+}
+}
+
+/* On larger screens, hide the hamburger button */
+@media (min-width: 769px) {
+  .menu-toggle {
+      display: none;
+  }
+}

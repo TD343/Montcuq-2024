@@ -67,17 +67,22 @@ body {
     .nav-links.active {
         display: flex; /* Display the nav-links when active */
     }
-  
+    
     .menu-toggle {
-        display: block; /* Show the hamburger button only on mobile */
+        display: flex; /* Utilise Flexbox pour centrer l'icône */
+        justify-content: center; /* Centre l'icône horizontalement */
+        align-items: center; /* Centre l'icône verticalement */
         position: absolute;
-        top: 1rem; /* Adjust the position from the top */
-        right: 1rem; /* Position it on the top-right */
+        top: 1rem;
+        right: 1rem;
         background: none;
         border: none;
-        font-size: 2rem; /* Make the hamburger button larger */
+        font-size: 2rem; /* Taille de l'icône */
+        width: 40px; /* Fixer la largeur */
+        height: 40px; /* Fixer la hauteur */
         color: #0077b6;
         cursor: pointer;
+        border-radius: 5px; /* Ajoute des bords arrondis, optionnel pour un effet visuel */
     }
   }
   

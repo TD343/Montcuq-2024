@@ -10,7 +10,9 @@
     line-height: 1.6;
     color: #333;
   }
-  
+
+
+
 /* Navbar */
 .navbar {
   display: flex;
@@ -24,19 +26,16 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
-
 .navbar .logo {
   font-size: 1.5rem;
   font-weight: bold;
   color: #0077b6;
 }
-
 .nav-links {
   list-style: none;
   display: flex;
   gap: 1.5rem;
 }
-
 /* Links Styling */
 .nav-links a {
   text-decoration: none;
@@ -48,71 +47,20 @@
   color: #023e8a;
 }
 
-/* Mobile Dropdown Menu (Hidden by default) */
-@media (max-width: 768px) {
-  .nav-links {
-      display: none; /* Hide the nav-links by default */
-      flex-direction: column;
-      background-color: #fff;
-      position: absolute;
-      top: 100%;
-      right: 0;  /* Align the dropdown to the right */
-      width: 100%;
-      padding: 1rem 0;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
 
-  .nav-links.active {
-      display: flex; /* Display the nav-links when active */
-  }
 
-  .menu-toggle {
-      display: block; /* Show the hamburger button only on mobile */
-      position: absolute;
-      top: 1rem; /* Adjust the position from the top */
-      right: 1rem; /* Position it on the top-right */
-      background: none;
-      border: none;
-      font-size: 2rem; /* Make the hamburger button larger */
-      color: #0077b6;
-      cursor: pointer;
-  }
+
+/* Style for links in the sections */
+#about a, #events a {
+  color: #0077b6;  /* Replace with your desired color */
+  text-decoration: none;  /* Optional: Removes underline */
 }
 
-/* On larger screens, hide the hamburger button */
-@media (min-width: 769px) {
-  .menu-toggle {
-      display: none;
-  }
-}
-
-
-  /* Hero Section */
-  .hero {
-    height: 100vh;
-    background: url('your-image-path.jpg') center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    text-align: center;
-  }
-  
-  .hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  
-  .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .countdown {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
+/* Optional: Style for hover effect */
+#about a:hover, #events a:hover {
+  color: #023e8a;  /* Replace with hover color */
+  text-decoration: underline;  /* Optional: Adds underline on hover */
+} 
   /* Section Styles */
   section {
     padding: 4rem 2rem;
@@ -130,51 +78,49 @@
     color: #555;
   }
   
+
+
+
   /* Footer */
   footer {
     background-color: #f1f1f1;
     padding: 2rem 0;
     text-align: center;
   }
-  
   footer ul {
     list-style: none;
   }
-  
   footer ul li {
     display: inline;
     margin: 0 1rem;
   }
-  
   footer ul a {
     text-decoration: none;
     color: #0077b6;
   }
-  
   footer ul a:hover {
     text-decoration: underline;
   }
+
+
 
 /* Carousel Container */
 .carousel-container {
     position: relative;
     width: 100%;
     overflow: hidden;
-  }
-  
+  } 
   /* Carousel Images */
   .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
-  }
-  
+  } 
   .carousel img {
     min-width: 100%;
     height: auto;
     display: block;
     object-fit: cover; /* Ensure images cover the container without stretching */
   }
-  
   /* Boutons de navigation du carrousel */
 button {
   position: absolute;
@@ -184,20 +130,19 @@ button {
   color: rgb(25, 0, 255);
   padding: 10px;
   border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   border: none;
   cursor: pointer;
   z-index: 10;
   transition: all 0.3s ease;
 }
-
 .prev {
   left: 10px;
 }
-
 .next {
   right: 10px;
 }
+
+
 
 /* Static Text Overlay */
 .static-text {
@@ -206,7 +151,7 @@ button {
   left: 50%;
   transform: translate(-50%, -50%); /* Center the text */
   color: white;
-  font-size: 3.5rem; /* Slightly larger font size */
+  font-size: 5rem; /* Slightly larger font size */
   font-weight: bold;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0); /* Subtle shadow for readability */
   background-color: rgba(0, 0, 0, 0); /* Semi-transparent dark background */
@@ -217,6 +162,10 @@ button {
   word-wrap: break-word; /* Allow text to break into multiple lines */
   box-sizing: border-box; /* Include padding in width calculations */
 }
+
+
+
+
 
 /* Mobile Styles */
 @media (max-width: 768px) {
@@ -256,5 +205,52 @@ button {
       left: 50%; 
       transform: translateX(-50%);
       z-index: 10; /* S'assure que le texte reste au-dessus de tout autre élément */
+  }
+}
+
+
+
+
+
+/* Mobile Dropdown Menu (Hidden by default) */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none; /* Hide the nav-links by default */
+      flex-direction: column;
+      background-color: #fff;
+      position: absolute;
+      top: 100%;
+      right: 0;  /* Align the dropdown to the right */
+      width: 100%;
+      padding: 1rem 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+      display: flex; /* Display the nav-links when active */
+  }
+
+  .menu-toggle {
+    display: flex; /* Utilise Flexbox pour centrer l'icône */
+    justify-content: center; /* Centre l'icône horizontalement */
+    align-items: center; /* Centre l'icône verticalement */
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem; /* Taille de l'icône */
+    width: 40px; /* Fixer la largeur */
+    height: 40px; /* Fixer la hauteur */
+    color: #0077b6;
+    cursor: pointer;
+    border-radius: 5px; /* Ajoute des bords arrondis, optionnel pour un effet visuel */
+}
+}
+
+/* On larger screens, hide the hamburger button */
+@media (min-width: 769px) {
+  .menu-toggle {
+      display: none;
   }
 }
