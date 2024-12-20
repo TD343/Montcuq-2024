@@ -149,7 +149,7 @@ color: #023e8a;
     background-color: #f1f1f1;
     padding: 2rem 0;
     text-align: center;
-    margin-top: auto; /* Ensure the footer is pushed to the bottom */
+    margin-top: auto;
   }
   
   footer ul {
