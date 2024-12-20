@@ -149,6 +149,7 @@ color: #023e8a;
     background-color: #f1f1f1;
     padding: 2rem 0;
     text-align: center;
+    margin-top: auto; /* Ensure the footer is pushed to the bottom */
   }
   
   footer ul {
@@ -169,6 +170,17 @@ color: #023e8a;
     text-decoration: underline;
   }
 
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.wrapper {
+    flex: 1; /* Makes the main content fill the available space */
+}
+
+
   /* Modifier la taille du texte sur mobile */
 @media (max-width: 768px) {
   body, h1, h2, h3, h4, h5, h6, p, a {
@@ -182,3 +194,4 @@ color: #023e8a;
   .nav-links a {
       font-size: 0.9rem; /* Réduit la taille des liens dans la navbar */
   }}
+

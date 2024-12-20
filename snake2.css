@@ -96,6 +96,7 @@
     background-color: #f1f1f1;
     padding: 2rem 0;
     text-align: center;
+    margin-top: auto; /* Ensure the footer is pushed to the bottom */
   }
   
   footer ul {
@@ -115,6 +116,16 @@
   footer ul a:hover {
     text-decoration: underline;
   }
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.wrapper {
+    flex: 1; /* Makes the main content fill the available space */
+}
+
 
   /* Snake Game Styles */
 #gameContainer {
