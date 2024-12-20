@@ -1,0 +1,205 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+
+
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0077b6;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+/* Links Styling */
+.nav-links a {
+  text-decoration: none;
+  color: #0077b6;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #023e8a;
+}
+
+/* Footer */
+footer {
+    background-color: #f1f1f1;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  footer ul {
+    list-style: none;
+  }
+  footer ul li {
+    display: inline;
+    margin: 0 1rem;
+  }
+  footer ul a {
+    text-decoration: none;
+    color: #0077b6;
+  }
+  footer ul a:hover {
+    text-decoration: underline;
+  }
+
+
+
+
+  /* Conteneur principal de l'article */
+.article-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  /* En-tête de l'article */
+  .article-header {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+  .article-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  /* Contenu de l'article */
+  .article-content {
+    padding: 20px;
+  }
+  .article-title {
+    font-size: 2rem;
+    color: #023e8a;
+    margin-bottom: 1rem;
+  }
+  .article-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+  }
+  /* Ajouter une bordure au bas de l'article */
+  .article-content::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #e0e0e0;
+    margin-top: 20px;
+  }
+
+
+
+  /* Mobile Styles */
+@media (max-width: 768px) {
+    .static-text {
+      font-size: 2.5rem; /* Smaller font size for smaller screens */
+      padding: 15px; /* Less padding for a more compact look */
+      max-width: 90%; /* Increase width for smaller devices */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .static-text {
+      font-size: 1.8rem; /* Even smaller font size for very small screens */
+      padding: 10px; /* Compact padding for tight spaces */
+      max-width: 95%; /* Maximize available space */
+    }
+  }
+  
+  /* Modifier la taille du texte sur mobile */
+  @media (max-width: 768px) {
+    body, h1, h2, h3, h4, h5, h6, p, a {
+        font-size: 1rem; /* Taille de police par défaut, ajuste à ta convenance */
+    }
+  
+    .navbar .logo {
+        font-size: 1.2rem; /* Exemple pour changer la taille de la logo */
+    }
+  
+    .nav-links a {
+        font-size: 0.9rem; /* Réduit la taille des liens dans la navbar */
+    }
+  
+    /* Ajustement de la taille du texte statique pour qu'il soit visible sur mobile */
+    .static-text {
+        font-size: 1.8rem; /* Taille du texte */
+        top: 10%; /* Placer le texte un peu plus bas que l'original pour le rendre visible */
+        left: 50%; 
+        transform: translateX(-50%);
+        z-index: 10; /* S'assure que le texte reste au-dessus de tout autre élément */
+    }
+  }
+  
+  
+  
+  
+  /* Mobile Dropdown Menu (Hidden by default) */
+  @media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide the nav-links by default */
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 100%;
+        right: 0;  /* Align the dropdown to the right */
+        width: 100%;
+        padding: 1rem 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    .nav-links.active {
+        display: flex; /* Display the nav-links when active */
+    }
+  
+    .menu-toggle {
+      display: flex; /* Utilise Flexbox pour centrer l'icône */
+      justify-content: center; /* Centre l'icône horizontalement */
+      align-items: center; /* Centre l'icône verticalement */
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 2rem; /* Taille de l'icône */
+      width: 40px; /* Fixer la largeur */
+      height: 40px; /* Fixer la hauteur */
+      color: #0077b6;
+      cursor: pointer;
+      border-radius: 5px; /* Ajoute des bords arrondis, optionnel pour un effet visuel */
+  }
+  }
+  
+  /* On larger screens, hide the hamburger button */
+  @media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+  }
