@@ -4,7 +4,7 @@ const navLinks = document.querySelector('.nav-links');
 
 // Add event listener to the toggle button
 menuToggle.addEventListener('click', () => {
-  // Toggle the "active" class on the nav-links
+  // Toggle the "active" class on the nav-links to show or hide the menu
   navLinks.classList.toggle('active');
 
   // Change the aria-expanded attribute for accessibility

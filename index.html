@@ -14,9 +14,8 @@
       <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
       <ul class="nav-links">
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="#about">Les scores</a></li>
+        <li><a href="board.html">Les scores</a></li>
         <li><a href="absurdity.html">Nouvelles</a></li>
-        <li><a href="#athletes">Athlètes</a></li>
         <li><a href="#explore">A propos</a></li>
       </ul>
     </nav>
@@ -32,36 +31,26 @@
       <img src="picture paris/pic8.jpg" alt="Paris Skyline">
       <img src="picture paris/pic6.jpg" alt="Paris Skyline">
     </div>
-    <!-- bouton navigation -->
-    <button class="prev" onclick="moveSlide-1"></button>
-    <button class="next" onclick="moveSlide+1"></button>
+    <!-- Navigation -->
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
   </div>
 
   <!-- text static sur image -->
   <div class="static-text">Bienvenue au JO de Montcuq 2024</div>
 </div>
 
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <h1>Bienvenue à Montcuq 2024</h1>
-      <p>L'ère légendaire</p>
-    </div>
-  </section>
+
 
   <!--section under body-->
   <section id="about">
-    <h2><a href="index.html">Tableau des scores</a></h2>
+    <h2><a href="board.html">Tableau des scores</a></h2>
     <p>Découvrez les résultats</p>
   </section>
 
   <section id="events">
-    <h2>Nouvelles</h2>
+    <h2><a href="absurdity.html">Nouvelles</a></h2>
     <p>Les dernières nouvelles de Montcuq 2024</p>
-  </section>
-
-  <section id="athletes">
-    <h2>Athlètes</h2>
-    <p>Les nouveaux athlètes, des légendes depuis Montcuq 2024</p>
   </section>
 
 
@@ -69,7 +58,7 @@
   <footer>
     <div class="footer-content">
       <ul>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact">Contactez nous</a></li>
         <li><a href="snake2.html">Snake? Comment ca?...</a></li>
         <li><a href="absurdity.html">Absurdité.</a></li>
       </ul>

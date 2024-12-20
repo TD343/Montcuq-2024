@@ -1,0 +1,156 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes full height */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0077b6;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #0077b6;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #023e8a;
+}
+
+/* Mobile Dropdown Menu (Hidden by default) */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide the nav-links by default */
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 100%;
+        right: 0;  /* Align the dropdown to the right */
+        width: 100%;
+        padding: 1rem 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    .nav-links.active {
+        display: flex; /* Display the nav-links when active */
+    }
+  
+    .menu-toggle {
+        display: block; /* Show the hamburger button only on mobile */
+        position: absolute;
+        top: 1rem; /* Adjust the position from the top */
+        right: 1rem; /* Position it on the top-right */
+        background: none;
+        border: none;
+        font-size: 2rem; /* Make the hamburger button larger */
+        color: #0077b6;
+        cursor: pointer;
+    }
+  }
+  
+  /* On larger screens, hide the hamburger button */
+  @media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+  }
+  
+ /* Footer */
+ footer {
+    background-color: #f1f1f1;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: auto; /* Push the footer to the bottom */
+  }
+  
+  footer ul {
+    list-style: none;
+  }
+  
+  footer ul li {
+    display: inline;
+    margin: 0 1rem;
+  }
+  
+  footer ul a {
+    text-decoration: none;
+    color: #0077b6;
+  }
+  
+  footer ul a:hover {
+    text-decoration: underline;
+  }
+
+/* Big Text */
+.big-text {
+    font-size: 10rem; 
+    font-weight: bold;
+    color: #0077b6;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Ensures it takes available space */
+    margin-top: 100px; /* Push it down to make space for the navbar */
+    margin-bottom: 0;
+    min-height: 80vh; /* Make sure it takes up enough space on smaller screens */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .big-text {
+        font-size: 5rem; 
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navbar .logo {
+        font-size: 1.2rem;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem; 
+    }
+
+    .static-text {
+        font-size: 1.8rem; 
+        top: 10%;
+        left: 50%; 
+        transform: translateX(-50%);
+        z-index: 10;
+    }
+}

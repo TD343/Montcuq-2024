@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Montcuq 2024</title>
+  <link rel="stylesheet" href="board.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Montcuq 2024</div>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="board.html">Les scores</a></li>
+        <li><a href="absurdity.html">Nouvelles</a></li>
+        <li><a href="#explore">A propos</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <script src="toggle.js"></script>
+
+  <!-- Caroussel d'images -->
+  <div class="carousel-container">
+    <div class="carousel">
+      <img src="picture paris/pic1.jpg" alt="Eiffel Tower">
+      <img src="picture paris/pic2.jpg" alt="Olympic Stadium">
+      <img src="picture paris/pic4.jpg" alt="Paris Skyline">
+      <img src="picture paris/pic8.jpg" alt="Paris Skyline">
+      <img src="picture paris/pic6.jpg" alt="Paris Skyline">
+    </div>
+    <!-- Navigation -->
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+  
+<!--js pour carroussel-->
+<script src="caroussel.js"></script>
+
+
+ <!-- Tableau des Scores -->
+ <section id="scoreboard">
+    <h2 class="static-text">Tableau des Médailles - Montcuq 2024</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Position</th>
+          <th>Pays/Équipe</th>
+          <th>Médailles d'Or</th>
+          <th>Médailles d'Argent</th>
+          <th>Médailles de Bronze</th>
+          <th>Discipline Dominante</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Chine</td>
+          <td>10,000</td>
+          <td>0</td>
+          <td>0</td>
+          <td>NA</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Corée du Nord</td>
+          <td>9,999</td>
+          <td>0</td>
+          <td>0</td>
+          <td>Propagande sportive, ou non</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Montcuq</td>
+          <td>420</td>
+          <td>69</td>
+          <td>13</td>
+          <td>Lancer de baguette</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Atlantis</td>
+          <td>300</td>
+          <td>50</td>
+          <td>25</td>
+          <td>Natation synchronisée</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Narnia</td>
+          <td>200</td>
+          <td>150</td>
+          <td>30</td>
+          <td>Tir à l’arc magique</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Mordor</td>
+          <td>180</td>
+          <td>30</td>
+          <td>15</td>
+          <td>Lancer de javelot enflammé</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Pôle Nord</td>
+          <td>150</td>
+          <td>100</td>
+          <td>50</td>
+          <td>Course en traîneau</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Pays Imaginaire</td>
+          <td>100</td>
+          <td>80</td>
+          <td>40</td>
+          <td>Tir à la poudre de fée</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Wakanda</td>
+          <td>90</td>
+          <td>70</td>
+          <td>20</td>
+          <td>FOREVER</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Bikini Bottom</td>
+          <td>40</td>
+          <td>20</td>
+          <td>10</td>
+          <td>Nage synchronisée</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Springfield</td>
+          <td>45</td>
+          <td>30</td>
+          <td>25</td>
+          <td>Lancer de donut</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>La La land</td>
+          <td>50</td>
+          <td>20</td>
+          <td>0</td>
+          <td>Mia and Sebastian's theme</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>Krakozhia</td>
+          <td>10</td>
+          <td>5</td>
+          <td>0</td>
+          <td>Sprint dans un aéroport</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+ 
+<!--footer simple-->
+  <footer>
+    <div class="footer-content">
+      <ul>
+        <li><a href="#contact">Contactez nous</a></li>
+        <li><a href="snake2.html">Snake? Comment ca?...</a></li>
+        <li><a href="absurdity.html">Absurdité.</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>

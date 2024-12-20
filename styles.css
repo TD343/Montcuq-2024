@@ -37,6 +37,7 @@
   gap: 1.5rem;
 }
 
+/* Links Styling */
 .nav-links a {
   text-decoration: none;
   color: #0077b6;
@@ -47,37 +48,44 @@
   color: #023e8a;
 }
 
-/* Mobile styles */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: #0077b6;
-}
-
+/* Mobile Dropdown Menu (Hidden by default) */
 @media (max-width: 768px) {
   .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #fff;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 100%;
-    padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: none; /* Hide the nav-links by default */
+      flex-direction: column;
+      background-color: #fff;
+      position: absolute;
+      top: 100%;
+      right: 0;  /* Align the dropdown to the right */
+      width: 100%;
+      padding: 1rem 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
   .nav-links.active {
-    display: flex;
+      display: flex; /* Display the nav-links when active */
   }
 
   .menu-toggle {
-    display: block;
+      display: block; /* Show the hamburger button only on mobile */
+      position: absolute;
+      top: 1rem; /* Adjust the position from the top */
+      right: 1rem; /* Position it on the top-right */
+      background: none;
+      border: none;
+      font-size: 2rem; /* Make the hamburger button larger */
+      color: #0077b6;
+      cursor: pointer;
   }
 }
+
+/* On larger screens, hide the hamburger button */
+@media (min-width: 769px) {
+  .menu-toggle {
+      display: none;
+  }
+}
+
 
   /* Hero Section */
   .hero {
@@ -167,8 +175,8 @@
     object-fit: cover; /* Ensure images cover the container without stretching */
   }
   
-  /* Navigation Buttons */
-.prev, .next {
+  /* Boutons de navigation du carrousel */
+button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -189,33 +197,6 @@
 
 .next {
   right: 10px;
-}
-
-.prev::before, .next::before {
-  content: '';
-  display: block;
-  width: 20px;
-  height: 20px;
-  border-top: 3px solid black;
-  border-right: 3px solid black;
-  transform: rotate(45deg);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.prev::before {
-  transform: translate(-50%, -50%) rotate(-135deg);  /* Left arrow */
-}
-
-.next::before {
-  transform: translate(-50%, -50%) rotate(45deg);  /* Right arrow */
-}
-
-.prev:hover, .next:hover {
-  background-color: #f0f0f0;
-  box-shadow: 0 6px 15px rgb(47, 0, 255);
 }
 
 /* Static Text Overlay */
@@ -251,5 +232,29 @@
     font-size: 1.8rem; /* Even smaller font size for very small screens */
     padding: 10px; /* Compact padding for tight spaces */
     max-width: 95%; /* Maximize available space */
+  }
+}
+
+/* Modifier la taille du texte sur mobile */
+@media (max-width: 768px) {
+  body, h1, h2, h3, h4, h5, h6, p, a {
+      font-size: 1rem; /* Taille de police par défaut, ajuste à ta convenance */
+  }
+
+  .navbar .logo {
+      font-size: 1.2rem; /* Exemple pour changer la taille de la logo */
+  }
+
+  .nav-links a {
+      font-size: 0.9rem; /* Réduit la taille des liens dans la navbar */
+  }
+
+  /* Ajustement de la taille du texte statique pour qu'il soit visible sur mobile */
+  .static-text {
+      font-size: 1.8rem; /* Taille du texte */
+      top: 10%; /* Placer le texte un peu plus bas que l'original pour le rendre visible */
+      left: 50%; 
+      transform: translateX(-50%);
+      z-index: 10; /* S'assure que le texte reste au-dessus de tout autre élément */
   }
 }
